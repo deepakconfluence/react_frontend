@@ -39,6 +39,22 @@ The review covers:
 6. ♿ **Accessibility** - WCAG compliance, semantic HTML, keyboard navigation
 7. 📚 **SOLID Principles** - Design principles and architectural concerns
 
+## Required Output Format
+
+Always include all sections below in this exact order:
+
+1. Summary
+2. Code Quality
+3. Security
+4. Performance
+5. React Patterns
+6. Testing
+7. Accessibility
+8. SOLID Principles
+9. Final Verdict
+
+If there are no issues in a section, explicitly write: "No major issues found."
+
 ## Example Review Request
 
 ```
