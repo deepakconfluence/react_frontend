@@ -55,6 +55,25 @@ Always include all sections below in this exact order:
 
 If there are no issues in a section, explicitly write: "No major issues found."
 
+Use this symbol legend in the review output:
+
+- 🔴 Error: Potential bug, compilation issue, or critical problem
+- 🟡 Warning: Code smell, performance issue, or maintainability concern
+- 🔵 Info: Suggestion, best practice, or informational comment
+- 💡 Light Bulb: Quick fix or suggested code improvement
+- ✔️ Check: No issue detected or validation passed
+- 💬 Comment: General review feedback from Copilot
+- ✨ Sparkle: Copilot-generated review or AI suggestion
+
+Symbol usage rules:
+- Prefix each finding line with one symbol.
+- Use 🔴 for Critical and High severity issues.
+- Use 🟡 for Medium severity issues.
+- Use 🔵 for Low severity informational items.
+- Add a paired 💡 line with a concrete fix for each 🔴 issue.
+- Add at least one ✔️ line in positive findings when applicable.
+- Add one ✨ line in recommendations.
+
 ## Example Review Request
 
 ```

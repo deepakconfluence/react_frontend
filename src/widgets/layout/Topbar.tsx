@@ -17,13 +17,16 @@ export function Topbar() {
         <Button
           variant="ghost"
           size="icon"
+          type="button"
           onClick={toggleSidebar}
           aria-label={sidebarActionLabel}
           title={sidebarActionLabel}
           aria-controls="app-sidebar"
           aria-expanded={!sidebarCollapsed}
+          aria-pressed={!sidebarCollapsed}
         >
           <Menu className="h-4 w-4" />
+          <span className="sr-only">{sidebarCollapsed ? 'Sidebar collapsed' : 'Sidebar expanded'}</span>
         </Button>
       </div>
 
