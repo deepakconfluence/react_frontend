@@ -9,15 +9,17 @@ import { ProfileMenu } from './profile/ProfileMenu';
 export function Topbar() {
   const sidebarCollapsed = useUIStore((s) => s.sidebarCollapsed);
   const toggleSidebar = useUIStore((s) => s.toggleSidebar);
+  const sidebarActionLabel = sidebarCollapsed ? 'Expand sidebar' : 'Collapse sidebar';
 
   return (
-    <header className="h-14 border-b bg-card flex items-center justify-between px-4">
+    <header className="sticky top-0 z-20 h-14 border-b bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/80 flex items-center justify-between px-4">
       <div className="flex items-center gap-3">
         <Button
           variant="ghost"
           size="icon"
           onClick={toggleSidebar}
-          aria-label="Toggle sidebar"
+          aria-label={sidebarActionLabel}
+          title={sidebarActionLabel}
           aria-controls="app-sidebar"
           aria-expanded={!sidebarCollapsed}
         >
