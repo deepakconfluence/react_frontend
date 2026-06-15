@@ -7,6 +7,7 @@ export function Sidebar() {
 
   return (
     <aside
+      id="app-sidebar"
       className={cn(
         'shrink-0 bg-card border-r flex flex-col transition-[width] duration-200',
         collapsed ? 'w-16' : 'w-64'
