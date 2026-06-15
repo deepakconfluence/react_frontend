@@ -7,12 +7,20 @@ import { ThemeSelectionPanel } from './theme-selection/ThemeSelectionPanel';
 import { ProfileMenu } from './profile/ProfileMenu';
 
 export function Topbar() {
+  const sidebarCollapsed = useUIStore((s) => s.sidebarCollapsed);
   const toggleSidebar = useUIStore((s) => s.toggleSidebar);
 
   return (
     <header className="h-14 border-b bg-card flex items-center justify-between px-4">
       <div className="flex items-center gap-3">
-        <Button variant="ghost" size="icon" onClick={toggleSidebar} aria-label="Toggle sidebar">
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={toggleSidebar}
+          aria-label="Toggle sidebar"
+          aria-controls="app-sidebar"
+          aria-expanded={!sidebarCollapsed}
+        >
           <Menu className="h-4 w-4" />
         </Button>
       </div>
