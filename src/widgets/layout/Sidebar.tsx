@@ -8,14 +8,16 @@ export function Sidebar() {
   return (
     <aside
       id="app-sidebar"
+      role="navigation"
       aria-label="Primary navigation"
+      aria-labelledby="sidebar-title"
       className={cn(
         'shrink-0 bg-card border-r flex flex-col transition-[width] duration-200',
         collapsed ? 'w-16' : 'w-64'
       )}
     >
       <div className="p-4 border-b">
-        <h1 className={cn('text-lg font-bold text-primary truncate', collapsed && 'sr-only')}>
+        <h1 id="sidebar-title" className={cn('text-lg font-bold text-primary truncate', collapsed && 'sr-only')}>
           Confluence Enterprise SaaS
         </h1>
         {!collapsed && <p className="text-xs text-muted-foreground">Admin Panel</p>}
