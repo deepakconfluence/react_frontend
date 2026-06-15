@@ -60,6 +60,26 @@ Always include these sections in this exact order:
 8. SOLID Principles
 9. Final Verdict
 
+## Required Symbols
+Use these symbols in the review output:
+
+- 🔴 Error: Potential bug, compilation issue, or critical problem
+- 🟡 Warning: Code smell, performance issue, or maintainability concern
+- 🔵 Info: Suggestion, best practice, or informational comment
+- 💡 Light Bulb: Quick fix or suggested code improvement
+- ✔️ Check: No issue detected or validation passed
+- 💬 Comment: General review feedback from Copilot
+- ✨ Sparkle: Copilot-generated review or AI suggestion
+
+Symbol usage rules:
+- Prefix each finding line with one symbol.
+- Use 🔴 for Critical and High severity issues.
+- Use 🟡 for Medium severity issues.
+- Use 🔵 for Low severity informational items.
+- Add a paired 💡 line with a concrete fix for each 🔴 issue.
+- Add at least one ✔️ line in Positive findings when applicable.
+- Add one ✨ line in Recommendations.
+
 If a section has no issues, write: No major issues found.
 
 For each Critical or High issue:
