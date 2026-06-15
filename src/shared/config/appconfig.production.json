@@ -1,0 +1,5 @@
+{
+  "remoteServiceBaseUrl": "https://api.example.com",
+  "appBaseUrl": "https://app.example.com",
+  "localeMappings": []
+}

@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+  }
+
+  /* ── Per-theme palettes ───────────────────────────────────────────────────
+     `data-theme` is set on <html> by useApplyTheme(). Each theme overrides the
+     accent/brand colors; the dark variants (`.dark[data-theme="…"]`) keep good
+     contrast on dark backgrounds. `default` intentionally has no override — it
+     uses the blue :root / .dark palette above. */
+
+  /* theme2 — Emerald */
+  [data-theme='theme2'] {
+    --primary: 142 71% 45%;
+    --primary-foreground: 0 0% 100%;
+    --ring: 142 71% 45%;
+    --accent: 142 60% 94%;
+    --accent-foreground: 142 71% 25%;
+  }
+  .dark[data-theme='theme2'] {
+    --primary: 142 70% 50%;
+    --ring: 142 70% 50%;
+    --accent: 142 30% 18%;
+    --accent-foreground: 142 60% 80%;
+  }
+
+  /* theme3 — Violet */
+  [data-theme='theme3'] {
+    --primary: 262 83% 58%;
+    --primary-foreground: 0 0% 100%;
+    --ring: 262 83% 58%;
+    --accent: 262 70% 95%;
+    --accent-foreground: 262 60% 35%;
+  }
+  .dark[data-theme='theme3'] {
+    --primary: 263 70% 66%;
+    --ring: 263 70% 66%;
+    --accent: 263 30% 22%;
+    --accent-foreground: 263 60% 85%;
+  }
+
+  /* theme6 — Rose */
+  [data-theme='theme6'] {
+    --primary: 346 77% 50%;
+    --primary-foreground: 0 0% 100%;
+    --ring: 346 77% 50%;
+    --accent: 346 70% 95%;
+    --accent-foreground: 346 60% 35%;
+  }
+  .dark[data-theme='theme6'] {
+    --primary: 346 80% 60%;
+    --ring: 346 80% 60%;
+    --accent: 346 30% 22%;
+    --accent-foreground: 346 60% 85%;
+  }
+
+  /* theme7 — Amber */
+  [data-theme='theme7'] {
+    --primary: 28 90% 54%;
+    --primary-foreground: 0 0% 100%;
+    --ring: 28 90% 54%;
+    --accent: 33 100% 94%;
+    --accent-foreground: 28 80% 32%;
+  }
+  .dark[data-theme='theme7'] {
+    --primary: 30 95% 58%;
+    --ring: 30 95% 58%;
+    --accent: 30 40% 20%;
+    --accent-foreground: 33 90% 80%;
+  }
+
+  /* theme8 — Teal */
+  [data-theme='theme8'] {
+    --primary: 189 94% 38%;
+    --primary-foreground: 0 0% 100%;
+    --ring: 189 94% 38%;
+    --accent: 187 70% 93%;
+    --accent-foreground: 189 80% 25%;
+  }
+  .dark[data-theme='theme8'] {
+    --primary: 188 86% 53%;
+    --ring: 188 86% 53%;
+    --accent: 188 40% 18%;
+    --accent-foreground: 187 70% 80%;
+  }
+
+  /* theme10 — Indigo */
+  [data-theme='theme10'] {
+    --primary: 243 75% 59%;
+    --primary-foreground: 0 0% 100%;
+    --ring: 243 75% 59%;
+    --accent: 243 70% 95%;
+    --accent-foreground: 243 60% 38%;
+  }
+  .dark[data-theme='theme10'] {
+    --primary: 243 75% 70%;
+    --ring: 243 75% 70%;
+    --accent: 243 35% 24%;
+    --accent-foreground: 243 60% 88%;
+  }
+
+  /* theme11 — Graphite (elegant monochrome) */
+  [data-theme='theme11'] {
+    --primary: 215 28% 30%;
+    --primary-foreground: 0 0% 100%;
+    --ring: 215 28% 30%;
+    --accent: 215 25% 93%;
+    --accent-foreground: 215 28% 25%;
+  }
+  .dark[data-theme='theme11'] {
+    --primary: 215 20% 75%;
+    --primary-foreground: 215 28% 17%;
+    --ring: 215 20% 75%;
+    --accent: 215 25% 22%;
+    --accent-foreground: 215 20% 85%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

@@ -1,0 +1,29 @@
+import { Menu } from 'lucide-react';
+import { Button } from '@/shared/components/ui/button';
+import { useUIStore } from '@/shared/stores/ui-store';
+import { LanguageSwitch } from '@/shared/localization/LanguageSwitch';
+import { HeaderNotifications } from './notifications/HeaderNotifications';
+import { ThemeSelectionPanel } from './theme-selection/ThemeSelectionPanel';
+import { ProfileMenu } from './profile/ProfileMenu';
+
+export function Topbar() {
+  const toggleSidebar = useUIStore((s) => s.toggleSidebar);
+
+  return (
+    <header className="h-14 border-b bg-card flex items-center justify-between px-4">
+      <div className="flex items-center gap-3">
+        <Button variant="ghost" size="icon" onClick={toggleSidebar} aria-label="Toggle sidebar">
+          <Menu className="h-4 w-4" />
+        </Button>
+      </div>
+
+      <div className="flex items-center gap-2">
+        <HeaderNotifications />
+        <LanguageSwitch />
+        <ThemeSelectionPanel />
+        <div className="w-px h-6 bg-border mx-1" aria-hidden="true" />
+        <ProfileMenu compact />
+      </div>
+    </header>
+  );
+}
